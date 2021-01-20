@@ -1,23 +1,20 @@
+
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
   <a class="navbar-brand" href="#">{{ title }}</a>
+  
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto"></ul>
-    <div class="btn-group">
-      <button
-        type="button"
-        class="btn btn-secondary dropdown-toggle"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-      >
-        Sepet
-      </button>
-      <div class="dropdown-menu dropdown-menu-right">
-        <button class="dropdown-item" type="button">Action</button>
-        <button class="dropdown-item" type="button">Another action</button>
-        <button class="dropdown-item" type="button">Something else here</button>
-      </div>
-    </div>
   </div>
+  <app-cart-summary></app-cart-summary>;
 </nav>
-<app-product></app-product>
+  
+<div class="col">
+  <div class="row">
+      <div class="col-3">
+          <app-category></app-category>
+      </div>
+      <div class="col-9">
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>

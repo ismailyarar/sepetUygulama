@@ -6,16 +6,16 @@ import { CategoryService } from '../category/category.service';
   selector: 'app-category',
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css'],
-  providers: [CategoryService]
+  providers: [CategoryService],
 })
 export class CategoryComponent implements OnInit {
-  constructor(private categoryService:CategoryService) {}
-categories:Category[];
-getCategories() {
-  this.categoryService.getCategories().subscribe((data) => {
-    this.categories = data;
-  });
-}
+  constructor(private categoryService: CategoryService) {}
+  categories: Category[];
+  getCategories() {
+    this.categoryService.getCategories().subscribe((data) => {
+      this.categories = data;
+    });
+  }
   ngOnInit(): void {
     this.getCategories();
   }
